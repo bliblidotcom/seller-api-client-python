@@ -1,6 +1,6 @@
 from com.blibli.oss.seller_api.client.http.core import http_request
-from com.blibli.oss.seller_api.client.http.models.MandatoryParameter import MandatoryParameter
-from com.blibli.oss.seller_api.client.http.models.MandatoryHeader import MandatoryHeader
+from com.blibli.oss.seller_api.client.http.models.mandatory_parameter import MandatoryParameter
+from com.blibli.oss.seller_api.client.http.models.mandatory_header import MandatoryHeader
 
 if __name__ == "__main__":
     mandatory_parameter = MandatoryParameter("client.sdk@mailinator.com",

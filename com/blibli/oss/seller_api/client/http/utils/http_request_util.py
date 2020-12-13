@@ -9,7 +9,7 @@ import base64
 
 from datetime import datetime
 
-from com.blibli.oss.seller_api.client.http.models.Constant import Constant
+from com.blibli.oss.seller_api.client.http.models.constant import Constant
 
 
 def create_request_parameters(mandatory_parameter, params=None):

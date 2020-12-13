@@ -1,7 +1,7 @@
 import requests
 
-from com.blibli.oss.seller_api.client.http.models.Constant import Constant
-from com.blibli.oss.seller_api.client.http.utils import HttpRequestUtil
+from com.blibli.oss.seller_api.client.http.models.constant import Constant
+from com.blibli.oss.seller_api.client.http.utils import http_request_util
 
 
 def get(url, mandatory_parameter, mandatory_header, params=None, timeout=None):
@@ -32,8 +32,8 @@ def delete(url, mandatory_parameter, mandatory_header, params=None, timeout=None
 def request(method, url, mandatory_parameter, mandatory_header, body=None, params=None, timeout=None):
     __validate_request(method, url, mandatory_parameter, mandatory_header)
     timeout = __get_default_timeout(timeout)
-    params = HttpRequestUtil.create_request_parameters(mandatory_parameter, params)
-    headers = HttpRequestUtil.create_request_headers(method, url, mandatory_header, body)
+    params = http_request_util.create_request_parameters(mandatory_parameter, params)
+    headers = http_request_util.create_request_headers(method, url, mandatory_header, body)
     auth = (mandatory_header.api_client_id, mandatory_header.api_client_key)
     return requests.request(method, url, data=body, params=params,
                             headers=headers, auth=auth, timeout=timeout)
